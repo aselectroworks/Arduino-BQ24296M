@@ -23,7 +23,7 @@ BQ24296M::BQ24296M(int8_t ce_n, int8_t int_n, int8_t psel, int8_t pg_n, int8_t s
 { 
     DEBUG_PRINT("[BQ24296M] Call Contructor"); 
 }
-#ifdef ESP32 || ESP8266
+#if defined(ESP32) || defined(ESP8266)
 BQ24296M::BQ24296M(int8_t sda, int8_t scl, int8_t ce_n, int8_t int_n, int8_t psel, int8_t pg_n, int8_t stat, int8_t otg): 
     _psel(psel),  
     _pg_n(pg_n),  
